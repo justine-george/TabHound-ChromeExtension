@@ -1,39 +1,65 @@
-body {
-    margin: 0;
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    min-width: 400px;
+* {
+    box-sizing: border-box;
 }
 
-input {
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 500px;
+    /* width: 500px; */
+    max-height: 200px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.button-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.tablist-section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* input {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid #5f9341;
     margin-bottom: 4px;
-}
+} */
 
 button {
     background: #5f9341;
     color: white;
     padding: 10px 20px;
-    border: 1px solid #5f9341;
+    border: none;
     font-weight: bold;
+    border-radius: 30px;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 #delete-btn {
-    background: white;
-    color: #5f9341;
+    background: rgba(49, 0, 0, 0.911);
+    color: #ffffff;
+    margin-right: unset;
+    margin-left: auto; /* to right align */
 }
 
 ul {
-    margin-top: 20px;
+    margin: 0px;
     list-style: none;
-    padding-left: 0;
+    padding: 10px;
 }
 
 li {
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 a {

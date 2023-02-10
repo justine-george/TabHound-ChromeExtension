@@ -1,47 +1,55 @@
-let myLeads = []
-const inputEl = document.getElementById("input-el")
-const inputBtn = document.getElementById("input-btn")
-const ulEl = document.getElementById("ul-el")
+const saveCurrTabBtn = document.getElementById("save-currtab-btn")
+const saveAllTabsBtn = document.getElementById("save-alltabs-btn")
 const deleteBtn = document.getElementById("delete-btn")
-const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
-const tabBtn = document.getElementById("tab-btn")
 
+const ulTablistEl = document.getElementById("ul-tablist-element")
+
+// save format: url + space + title
+let savedLinks = []
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("savedLinks"))
 if (leadsFromLocalStorage) {
-    myLeads = leadsFromLocalStorage
-    render(myLeads)
+    savedLinks = leadsFromLocalStorage
+    render(savedLinks)
 }
 
-tabBtn.addEventListener("click", function(){    
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-        myLeads.push(tabs[0].url)
-        localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-        render(myLeads)
-    })
-})
-
-function render(leads) {
+function render(savedLinks) {
     let listItems = ""
-    for (let i = 0; i < leads.length; i++) {
+    for (let i = 0; i < savedLinks.length; i++) {
+        const [url, ...rem] = savedLinks[i].split(" ")
+        const title = rem.join(" ")
         listItems += `
             <li>
-                <a target='_blank' href='${leads[i]}'>
-                    ${leads[i]}
+                <a target='_blank' href='${url}'>
+                    ${title}
                 </a>
             </li>
         `
     }
-    ulEl.innerHTML = listItems
+    ulTablistEl.innerHTML = listItems
 }
+
+saveCurrTabBtn.addEventListener("click", function(){    
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        if (!savedLinks.includes(tabs[0].url + " " + tabs[0].title))
+            savedLinks.unshift(tabs[0].url + " " + tabs[0].title)
+        localStorage.setItem("savedLinks", JSON.stringify(savedLinks) )
+        render(savedLinks)
+    })
+})
+
+saveAllTabsBtn.addEventListener("click", function(){    
+    chrome.tabs.query({currentWindow: true}, function(tabs){
+        for (let tab of tabs) {
+            if (!savedLinks.includes(tab.url + " " + tab.title))
+                savedLinks.unshift(tab.url + " " + tab.title)
+        }
+        localStorage.setItem("savedLinks", JSON.stringify(savedLinks))   
+        render(savedLinks)
+    })
+})
 
 deleteBtn.addEventListener("dblclick", function() {
     localStorage.clear()
-    myLeads = []
-    render(myLeads)
-})
-
-inputBtn.addEventListener("click", function() {
-    myLeads.push(inputEl.value)
-    inputEl.value = ""
-    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-    render(myLeads)
+    savedLinks = []
+    render(savedLinks)
 })
