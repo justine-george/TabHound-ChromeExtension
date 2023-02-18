@@ -4,6 +4,9 @@ const deleteBtn = document.getElementById("delete-all-btn")
 
 const ulTablistEl = document.getElementById("ul-tablist-element")
 
+// get backup-google-btn element
+const backupBtn = document.getElementById("backup-google-btn")
+
 // save format: url + space + title
 let savedLinks = []
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("savedLinks"))

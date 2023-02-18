@@ -47,6 +47,17 @@ body {
     cursor: pointer;
 }
 
+.backup-google-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #5f9341;
+    color: white;
+    cursor: pointer;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
 span.material-symbols-outlined.delete-row-btn {
     font-size: 20px;
 }
