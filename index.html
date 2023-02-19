@@ -1,41 +1,45 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    </head>
-    <body>
-        <div class="main">
-            <div class="button-section">
-                <button id="save-currtab-btn">Save Current Tab</button>
-                <button id="save-alltabs-btn">Save All Tabs</button>
-                <div class="backup-google-btn" id="backup-google-btn">
-                    <span class="material-symbols-outlined">backup</span>
-                </div>
-                <button id="delete-all-btn">Delete All</button>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="button-section">
+            <div class="action-btn left-action-btn" id="save-currtab-btn">
+                <span class="material-symbols-outlined">add</span>
             </div>
-            <div class="tablist-section">
-                <ul id="ul-tablist-element">
-                    <!-- <div class="tab-row">
-                        <li><a target='_blank' href='http://www.google.com'>Google</a></li>
-                        <div class="close-btn">
-                            <span class="material-symbols-outlined delete-row-btn">close</span>
-                        </div>
-                    </div>
-                    <div class="tab-row">
-                        <li><a target='_blank' href='http://www.google.com'>Google</a></li>
-                        <div class="close-btn">
-                            <span class="material-symbols-outlined delete-row-btn">close</span>
-                        </div>
-                    </div>
-                    <div class="tab-row">
-                        <li><a target='_blank' href='http://www.google.com'>Google</a></li>
-                        <div class="close-btn">
-                            <span class="material-symbols-outlined delete-row-btn">close</span>
-                        </div>
-                    </div> -->
-                </ul>
+            <div class="action-btn left-action-btn" id="save-alltabs-btn">
+                <span class="material-symbols-outlined">save</span>
+            </div>
+            <div class="divider" id="divider-space">
+            </div>
+            <div class="action-btn right-action-btn" id="backup-google-btn">
+                <span class="material-symbols-outlined">backup</span>
+            </div>
+            <div class="action-btn right-action-btn" id="delete-all-btn">
+                <span class="material-symbols-outlined">delete</span>
             </div>
         </div>
-        <script src="index.js"></script>
-    </body>
+        <div class="tablist-section">
+            <ul id="ul-tablist-element">
+                <!-- <div class="tab-row-container">
+                    <a target='_blank' href='https://stackoverflow.com/' class="tab-row">
+                        <img class="tab-icon" src="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196">
+                        <li>Stackoverflow</li>
+                    </a>
+                    <div class="close-btn">
+                        <span class="material-symbols-outlined delete-row-btn" data-id="${savedLink.id}">close</span>
+                    </div>
+                </div> -->
+            </ul>
+        </div>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+
 </html>
