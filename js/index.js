@@ -28,7 +28,7 @@ function render(savedLinks) {
     for (const savedLink of savedLinks) {
         // const [url, ...rem] = savedLinks[i].split(" ")
         // const title = rem.join(" ")
-        const iconUrl = (savedLink.iconUrl === "") ? "./white_icon.png" : savedLink.iconUrl
+        const iconUrl = (savedLink.iconUrl === "") ? "./assets/icons/white_icon.png" : savedLink.iconUrl
         let displayTitle = savedLink.title
         if (savedLink.title.length > 60)
             displayTitle = displayTitle.substr(0, 60) + "..."
