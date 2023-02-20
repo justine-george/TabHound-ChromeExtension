@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "version": "1.0",
+    "version": "0.1",
     "name": "TabHound - Tab Manager",
     "description": "TabHound allows you to save and manage your tabs in a organized way.",
     "action": {
