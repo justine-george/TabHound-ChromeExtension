@@ -58,10 +58,10 @@ body {
     color: white;
 }
 
-.tab-row-container:hover img {
-    /* background: #5f9341; */
-    /* border-radius: 5px; */
-}
+/* .tab-row-container:hover img {
+    background: #5f9341;
+    border-radius: 5px;
+} */
 
 .tab-row-container:hover .close-btn:hover {
     color: white;

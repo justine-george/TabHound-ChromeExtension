@@ -1,12 +1,16 @@
 {
     "manifest_version": 3,
     "version": "1.0",
-    "name": "TabHound",
+    "name": "TabHound - Tab Manager",
+    "description": "TabHound allows you to save and manage your tabs in a organized way.",
     "action": {
         "default_popup": "index.html",
-        "default_icon": "./assets/icons/icon.png"
+        "default_icon": "./icon128.png"
     },
     "permissions": [
         "tabs"
-    ]
+    ],
+    "icons": {
+        "128": "icon128.png"
+    }
 }
