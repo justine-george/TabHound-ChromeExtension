@@ -8,16 +8,14 @@ TabHound is a simple and efficient chrome extension that allows you to save and 
 - Organize saved links in a neat and efficient manner
 - Lightweight and easy to use
 
-<!---
 ## Usage
-- Install TabHound from the Chrome Web Store
+- Install TabHound from the Chrome Web Store [(link)](https://chrome.google.com/webstore/detail/tabhound-tab-manager/dhmeglggkjfgbinodfdphenmodhancbd)
 - Once installed, click on the TabHound icon in the browser toolbar
 - Click on the "Save Link" button to save the current tab's link
 - To open saved links, click on the TabHound icon and select either "Open All" or "Open Link" to open a specific link
 
 ## Contributing
-- We welcome contributions to TabHound! If you have any ideas or suggestions for new features or improvements, feel free to create an issue or submit a pull request.
+- If you have any ideas or suggestions for new features or improvements, feel free to create an issue or submit a pull request.
 
 ## License
 - TabHound is released under the MIT License.
--->
