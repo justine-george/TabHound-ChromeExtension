@@ -1,3 +1,6 @@
+## Important Update
+I've launched a new and improved version under the name Tab Keeper. For all the latest features and updates, please visit the [Tab Keeper](https://github.com/justine-george/tab-keeper-react-chrome-extension) repository.
+
 # TabHound - Chrome Extension
 
 TabHound is a simple and efficient chrome extension that allows you to save and manage your tabs in a organized way. With TabHound, you can save the current working tabs in one go and later open those links individually or all at once in separate tabs.
